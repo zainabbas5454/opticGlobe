@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Plans;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class PlanController extends Controller
@@ -15,6 +16,7 @@ class PlanController extends Controller
             'start_date'=>'required',
             'end_date'=>'required'
         ]);
+       
         $data = new Plans();
         $data->name = $req->name;
         $data->starting_date = $req->start_date;
@@ -23,5 +25,13 @@ class PlanController extends Controller
         $data->user_id = $user_id;
         $data->save();
         return redirect(route('home'))->with(['success'=>'Plan has been added successfully']);
+    }
+
+    public function MyPlan()
+    {
+        $data = DB::table('plans')
+                        ->where('user_id','=',Auth::user()->id)
+                        ->get();
+        return view('MyPlans.myplan',compact('data'));
     }
 }

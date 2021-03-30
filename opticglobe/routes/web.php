@@ -22,4 +22,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::post('Plans',[PlanController::class,'store'])->name('plan.store');
+Route::post('Plans',[PlanController::class,'store'])->name('plan.store')->middleware('auth');
+
+Route::get('MyPlan',[PlanController::class,'MyPlan'])->name('myplan')->middleware('auth');

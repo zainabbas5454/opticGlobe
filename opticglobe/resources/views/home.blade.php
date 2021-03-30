@@ -13,6 +13,7 @@
     @endforeach
     @endif
 <div class="card">
+    <a href="{{route('myplan')}}" class="btn btn-success">My Plans</a>
     <div class="card-header">
       My Plans
     </div>
