@@ -10,16 +10,12 @@ class PlanController extends Controller
 {
     public function store(Request $req)
     {
-
-
         $req->validate([
             'name'=>'required',
             'start_date'=>'required',
-            'ends_date'=>'required'
+            'end_date'=>'required'
         ]);
-
         $data = new Plans();
-
         $data->name = $req->name;
         $data->starting_date = $req->start_date;
         $data->end_date = $req->end_date;
