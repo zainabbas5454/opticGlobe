@@ -15,8 +15,7 @@
         @foreach ($data as $item )
         <tbody>
             <tr>
-                <td>{{$item->name}}</td>
-
+                <td><a href="{{route('PlanDetail',$item->id)}}">{{$item->name}}</a></td>
                 <td>{{$item->starting_date}}</td>
                 <td>{{$item->end_date}}</td>
 

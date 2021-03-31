@@ -25,3 +25,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::post('Plans',[PlanController::class,'store'])->name('plan.store')->middleware('auth');
 
 Route::get('MyPlan',[PlanController::class,'MyPlan'])->name('myplan')->middleware('auth');
+
+Route::get('PlanDetail',[PlanController::class,'ViewPlanDetail'])->name('ViewPlanDetail')->middleware('auth');
+
+Route::get('PlanDetail/{id}',[PlanController::class,'PlanDetail'])->name('PlanDetail');
+
+Route::get('ViewDaysDetail',[PlanController::class,'ViewDaysDetail'])->name('ViewDaysDetail');
+
+Route::post('ViewDaysDetail/{id}',[PlanController::class,'DaysDetail'])->name('DaysDetail');
+
+

@@ -16,8 +16,8 @@ class CreatePlansTable extends Migration
         Schema::create('plans', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('starting_date');
-            $table->string('end_date');
+            $table->date('starting_date');
+            $table->date('end_date');
 
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
