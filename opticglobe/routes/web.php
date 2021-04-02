@@ -30,8 +30,12 @@ Route::get('PlanDetail',[PlanController::class,'ViewPlanDetail'])->name('ViewPla
 
 Route::get('PlanDetail/{id}',[PlanController::class,'PlanDetail'])->name('PlanDetail');
 
-Route::get('ViewDaysDetail',[PlanController::class,'ViewDaysDetail'])->name('ViewDaysDetail');
+Route::get('ViewDaysDetail/{pid}',[PlanController::class,'ViewDaysDetail'])->name('ViewDaysDetail');
 
-Route::post('ViewDaysDetail/{id}',[PlanController::class,'DaysDetail'])->name('DaysDetail');
+Route::post('DaysDetail',[PlanController::class,'DaysDetail'])->name('DaysDetail');
 
+Route::get('delete/{id}',[PlanController::class,'delete'])->name('delete');
 
+Route::get('DaysDetail',[PlanController::class,'ShowDaysDetail'])->name('showdetail');
+
+Route::get('deletedays/{id}',[PlanController::class,'deleteDays'])->name('daysdelete');

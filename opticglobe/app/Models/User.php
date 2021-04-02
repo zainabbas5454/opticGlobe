@@ -45,4 +45,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Plans::class);
     }
+
+    public function DaysDetail()
+    {
+        return $this->hasMany(DaysDetail::class);
+    }
 }

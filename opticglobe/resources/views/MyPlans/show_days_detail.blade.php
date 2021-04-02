@@ -9,18 +9,22 @@
         <thead>
             <tr>
 
-                <th>Name</th>
-                <th>Start Date</th>
-                <th>End Date</th>
+
+                <th>Start time</th>
+                <th>End time</th>
+                <th>Description</th>
+                <th>Day Number</th>
                 <th>Action</th>
             </tr>
         </thead>
         @foreach ($data as $item )
         <tbody>
             <tr>
-                <td><a href="{{route('PlanDetail',$item->id)}}">{{$item->name}}</a></td>
-                <td>{{$item->starting_date}}</td>
-                <td>{{$item->end_date}}</td>
+
+                <td>{{$item->start_time}}</td>
+                <td>{{$item->end_time}}</td>
+                <td>{{$item->description}}</td>
+                <td>{{$item->day}}</td>
 
                  <td colspan="2"><a class="btn btn-danger btn-sm mr-3" href="{{route('daysdelete',$item->id)}}">Delete</a>
 
