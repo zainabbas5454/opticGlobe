@@ -12,8 +12,9 @@
     </div>
     @endforeach
     @endif
-<div class="card">
-    <a href="{{route('myplan')}}" class="btn btn-success">My Plans</a>
+
+    <a href="{{route('myplan')}}" class="btn btn-success mt-4 mb-4">My Plans</a>
+  <div class="card">
     <div class="card-header">
       My Plans
     </div>
