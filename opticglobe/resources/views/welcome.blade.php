@@ -49,7 +49,7 @@
                     <img src="{{asset('images/random3.jpg')}}" class="d-block w-100" alt="...">
                   </div>
                 </div>
-                <a class="btn btn-light" href="{{route('login')}}">Start Planning</a>
+                <a class="btn btn-primary mt-4" href="{{route('login')}}">Start Planning</a>
               </div>
 
 
