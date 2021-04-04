@@ -22,7 +22,7 @@
                 <td>{{$item->starting_date}}</td>
                 <td>{{$item->end_date}}</td>
 
-                 <td colspan="2"><a class="btn btn-danger btn-sm mr-3" href="{{route('daysdelete',$item->id)}}">Delete</a>
+                 <td colspan="2"><a class="btn btn-danger btn-sm mr-3" href="{{route('delete',$item->id)}}">Delete</a>
 
 
             </tr>
