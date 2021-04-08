@@ -104,7 +104,7 @@ class PlanController extends Controller
 
         $data->save();
 
-        return Redirect::back()->with(['success'=>'Details Added Successfully']);
+        return redirect(route('showdetail'))->with(['success'=>'Days Detail added successfully']);
 
         dd($req->all());
     }
