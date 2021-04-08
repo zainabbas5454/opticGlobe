@@ -41,9 +41,8 @@
         </div>
 
         <div class="form-group">
-
             <label for="day">Enter Day</label>
-            <input type='number' name="day" id="day" placeholder="Enter Day Number" class="form-control">
+            <input type='number'  name="day" id="day" placeholder="Enter Day Number" class="form-control">
         </div>
 
         <button class="btn btn-primary" type="submit">Submit</button>
