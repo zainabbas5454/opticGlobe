@@ -40,9 +40,9 @@
             <textarea class="form-control" id="description" name="description" rows="10"></textarea>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" hidden>
             <label for="day">Enter Day</label>
-            <input type='number'  name="day" id="day" placeholder="Enter Day Number" class="form-control">
+            <input type='number' name="day" value="{{Request::route('did')}}" id="day" placeholder="Enter Day Number" class="form-control">
         </div>
 
         <button class="btn btn-primary" type="submit">Submit</button>

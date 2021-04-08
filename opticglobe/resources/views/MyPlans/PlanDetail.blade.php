@@ -18,7 +18,7 @@
                         <span>Day {{$i+1}}</span>
                     </div>
                     <div>
-                        <a class="btn btn-danger" href="{{route('ViewDaysDetail',$pid)}}">  Add Detail</a><br><br>
+                        <a class="btn btn-danger" href="/ViewDaysDetail/{{$pid}}/{{$i+1}}">  Add Detail</a><br><br>
                     </div>
                 </div>
             @endfor

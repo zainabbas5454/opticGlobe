@@ -30,7 +30,7 @@ Route::get('PlanDetail',[PlanController::class,'ViewPlanDetail'])->name('ViewPla
 
 Route::get('PlanDetail/{id}',[PlanController::class,'PlanDetail'])->name('PlanDetail');
 
-Route::get('ViewDaysDetail/{pid}',[PlanController::class,'ViewDaysDetail'])->name('ViewDaysDetail');
+Route::get('ViewDaysDetail/{pid}/{did}',[PlanController::class,'ViewDaysDetail'])->name('ViewDaysDetail');
 
 Route::post('DaysDetail',[PlanController::class,'DaysDetail'])->name('DaysDetail');
 
