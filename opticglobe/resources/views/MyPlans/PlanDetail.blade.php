@@ -3,27 +3,15 @@
 @section('content')
 <div class="container">
 
-    <a href="{{route('showdetail')}}" class="btn btn-success mt-4 mb-4">Show Days Detail</a>
+    <a href="{{route('showdetail', $pid)}}" class="btn custom-btn mt-4 mb-4">Show Days Detail</a>
 
-    <div class="card">
-        
-        <div class="card-header">
-         Days Of Plan
-        </div>
+    <h6 class="mb-3" style=" font-weight: bold ">
+        Days Of Plan
+    </h6>
 
-        <div class="card-body">
-            @for ($i = 0; $i < $days; $i++)
-                <div class="d-flex justify-content-between">
-                    <div>
-                        <span>Day {{$i+1}}</span>
-                    </div>
-                    <div>
-                        <a class="btn btn-danger" href="/ViewDaysDetail/{{$pid}}/{{$i+1}}">  Add Detail</a><br><br>
-                    </div>
-                </div>
-            @endfor
-        </div>
-      </div>
+    @for ($i = 0; $i < $days; $i++)
+        <a class="btn custom-btn" href="/ViewDaysDetail/{{$pid}}/{{$i+1}}">  Day {{ $i + 1 }}</a> 
+    @endfor
 
 </div>
 @endsection

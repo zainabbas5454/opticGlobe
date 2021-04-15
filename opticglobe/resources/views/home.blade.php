@@ -13,7 +13,7 @@
     @endforeach
     @endif
 
-    <a href="{{route('myplan')}}" class="btn btn-success mt-4 mb-4">My Plans</a>
+    <a href="{{route('myplan')}}" class="btn custom-btn mt-4 mb-4">My Plans</a>
   <div class="card">
     <div class="card-header">
       My Plans
@@ -29,14 +29,14 @@
 
          <div class="form-group">
             <label for="start_date">Start Date</label>
-            <input type='datetime-local' name="start_date" id="start_date" placeholder="Enter Start Date" class="form-control">
+            <input type='date' name="start_date" id="start_date" placeholder="Enter Start Date" class="form-control">
         </div>
 
         <div class="form-group">
             <label for="end_date">End Date</label>
-            <input type='datetime-local' name="end_date" id="end_date" placeholder="Enter End Date" class="form-control">
+            <input type='date' name="end_date" id="end_date" placeholder="Enter End Date" class="form-control">
         </div>
-        <button class="btn btn-primary" type="submit">Submit</button>
+        <button class="btn custom-btn" type="submit">Submit</button>
      </form>
     </div>
   </div>

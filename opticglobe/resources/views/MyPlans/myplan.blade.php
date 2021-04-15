@@ -5,6 +5,16 @@
     @if(Session::has('success'))
 <div class="alert alert-success">{{session('success')}}</div>
 @endif
+
+<script>
+    function promptDelete(link){
+        if(confirm("Are you sure you want to delete ?"))
+        {
+            window.location.href = link;
+        }
+    }
+</script>
+
     <table class="table">
         <thead>
             <tr>
@@ -22,7 +32,7 @@
                 <td>{{$item->starting_date}}</td>
                 <td>{{$item->end_date}}</td>
 
-                 <td colspan="2"><a class="btn btn-danger btn-sm mr-3" href="{{route('delete',$item->id)}}">Delete</a>
+                 <td colspan="2"><a class="btn btn-danger btn-sm mr-3" onclick="promptDelete('{{route('delete',$item->id)}}');" >Delete</a>
 
 
             </tr>

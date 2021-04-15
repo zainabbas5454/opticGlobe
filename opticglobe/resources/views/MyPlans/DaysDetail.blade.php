@@ -28,16 +28,22 @@
          <div class="form-group">
 
             <label for="start_time">Start Time</label>
-            <input type='datetime-local' name="start_time" id="start_time" placeholder="Enter Start Time" class="form-control">
+            <input type='time' name="start_time" id="start_time" placeholder="Enter Start Time" class="form-control">
         </div>
 
         <div class="form-group">
             <label for="end_time">End Time</label>
-            <input type='datetime-local' name="end_time" id="end_time" placeholder="Enter End Time" class="form-control">
+            <input type='time' name="end_time" id="end_time" placeholder="Enter End Time" class="form-control">
         </div>
+
+        <div class="form-group">
+            <label for="activity">Location/Activity</label>
+            <textarea class="form-control" id="activity" name="activity" rows="2"></textarea>
+        </div>
+
         <div class="form-group">
             <label for="description">Description</label>
-            <textarea class="form-control" id="description" name="description" rows="10"></textarea>
+            <textarea class="form-control" id="description" name="description" rows="5"></textarea>
         </div>
 
         <div class="form-group" hidden>
@@ -45,7 +51,7 @@
             <input type='number' name="day" value="{{Request::route('did')}}" id="day" placeholder="Enter Day Number" class="form-control">
         </div>
 
-        <button class="btn btn-primary" type="submit">Submit</button>
+        <button class="btn custom-btn" type="submit">Submit</button>
      </form>
     </div>
   </div>

@@ -84,12 +84,10 @@ class PlanController extends Controller
     }
 
     public function DaysDetail(Request $req)
-
     {
         $req->validate([
             'start_time'=>'required',
             'end_time'=>'required',
-            'description'=>'required',
             'day'=>'required|integer|min:1'
         ]);
 
@@ -97,6 +95,7 @@ class PlanController extends Controller
 
         $data->start_time = $req->start_time;
         $data->end_time = $req->end_time;
+        $data->activity = $req->activity;
         $data->description = $req->description;
         $data->day = $req->day;
         $data->plan_id = $req->plan_id;
@@ -104,28 +103,30 @@ class PlanController extends Controller
 
         $data->save();
 
-        return redirect(route('showdetail'))->with(['success'=>'Days Detail added successfully']);
-
-        dd($req->all());
+        return redirect(route('showdetail', $req->plan_id))->with(['success'=>'Days Detail added successfully']);
     }
 
     public function delete($id)
     {
         Plans::find($id)->delete();
-        return Redirect::back()->with(['success'=>'Project Deleted Successfully']);
+        return Redirect::back()->with(['success'=>'Plan Deleted Successfully']);
     }
 
-    public function ShowDaysDetail()
+    public function ShowDaysDetail(Request $request)
     {
         $data = DB::table('days_details')
-                        ->where('user_id','=',Auth::user()->id)
-                        ->get();
+                ->where([
+                    'user_id' => Auth::user()->id,
+                    'plan_id' => $request->route('id')
+                ])
+                ->get();
+
         return view('MyPlans.show_days_detail',compact('data'));
     }
 
     public function deleteDays($id)
     {
         DaysDetail::find($id)->delete();
-        return Redirect::back()->with(['success'=>'Time Deleted Successfully']);
+        return Redirect::back()->with(['success'=>'Acitvity Deleted Successfully']);
     }
 }

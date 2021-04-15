@@ -17,7 +17,8 @@ class CreateDaysDetailsTable extends Migration
             $table->id();
             $table->string('start_time');
             $table->string('end_time');
-            $table->string('description');
+            $table->string('activity')->nullable();
+            $table->string('description')->nullable();
             $table->string('day');
 
             $table->unsignedBigInteger('user_id');

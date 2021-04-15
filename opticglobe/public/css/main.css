@@ -1,0 +1,20 @@
+body{
+    background: gray;
+    font-family: 'Nunito', sans-serif;
+}
+.custom-btn{
+    background: transparent;
+    border-radius: 0px;
+    border: 2px solid black;
+    color: black;
+    font-weight: bold;
+}
+
+.big{
+    font-size: xx-large;
+}
+
+a{
+    color: black;
+    font-weight: bold;
+}
